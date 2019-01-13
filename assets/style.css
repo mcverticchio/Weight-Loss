@@ -1,5 +1,9 @@
 :root {
-    --black: #272727;
+    --black: rgb(66, 66, 66);
+    --white: rgb(253, 253, 253);
+    --grey: rgb(146, 146, 146);
+    --topNav: rgba(20, 20, 20, 0.9);
+    --subNav: rgba(253, 253, 253, 0.8);
 }
 
 @font-face {
@@ -11,6 +15,7 @@ html {
     box-sizing: border-box;
     font-family: "muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: normal;
     color: var(--black);
 }
 
@@ -19,19 +24,101 @@ html {
 *:after {
     box-sizing: inherit;
 }
+body {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
 
+/* List styles */
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+}
 li {
-    ;
+    list-style-type: none;
+    padding: 0 5px;
 }
 
 /*  Button style */
 
 button {
   background-color: rgb(0, 151, 217);
-  padding: 20px;
+  padding: 10px 20px;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  font-size: 15px;
-  color: white;
+  font-size: 17.5px;
+  color: rgb(253, 253, 253);
+  border: 0;
+}
+
+
+/* Top Nav styles */
+
+.top {
+    background: url('/assets/images/hero.png') no-repeat fixed;
+    background-size: cover;
+    height: 100vh;
+    max-height: 800px;
+    display: grid;
+    grid-template-rows: 70px 51px 1fr;
+    grid-template-areas:
+        "topNav"
+        "subNav"
+        "hero"
+}
+
+.top_nav,
+.sub-nav {
+    background: var(--topNav);
+    color: var(--white);
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.sub-nav {
+    background: var(--subNav);
+    color: var(--grey);
+}
+
+.sub-nav > nav > ul {
+    font-size: 12px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 120px 12fr 8fr;
+    align-content: center;
+    color: var(--white);
+    background: rgba(0, 0, 0, 0.2);
+}
+.hero > * {
+    grid-column: 2 / 3;
+}
+.hero > h1 {
+    text-transform: uppercase;
+    font-size: 52px;
+    font-weight: lighter;
+}
+.hero > h3 {
+    max-width: 500px;
+    font-weight: normal;
+    font-size: 17.5px;
 }

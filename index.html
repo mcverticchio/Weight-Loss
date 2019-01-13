@@ -3,102 +3,111 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://use.fontawesome.com/c261cfb3a0.js"></script>
         <link rel="stylesheet" href="../assets/style.css">
         <title>Weight Loss</title>
     </head>
     <body>
-        <header>
-            <div class="top_header">
-                <img alt="logo" src="/assets/images/icon.png">
+        <div class="wrapper">
+
+            <div class="top">
+                <div class="top_nav">
+                    <img alt="logo" src="/assets/images/icon.png">
+                    <nav>
+                        <ul>
+                            <li>Login</li>
+                            <li>Signup</li>
+                            <li>Menu ☰</li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="sub-nav">
+                    <a>Weight Loss</a>
+                    <nav>
+                        <ul>
+                            <li>Overview</li>
+                            <li>Features</li>
+                            <li>Programs</li>
+                            <li>Training</li>
+                            <li></li>
+                        </ul>
+                    </nav>
+                </div>
+                <header class="hero">
+                    <h1>Working out <br />has never been so fun</h1>
+                    <h3>Welcome to the center of it all. The Fitness Shop presents
+                    you with hundreds of workout programs designed to guide your weight loss journey.</h3>
+                </header>
+            </div>
+
+            <!-- <section class="gallery">
+                <header>
+                    <h2>Weight Loss</h2>
+                    <h3>Welcome to the center of it all. The Fitness Shop presents
+                    you with hundreds of workout programs designed to guidey your weight loss journey.</h3>
+                </header>
+                <div class="gallery-images"></div>
+                <button>View More</button>
+            </section>
+
+            <section class="testimonies">
+                <img alt="testimony_1" src="/assets/images/quote.png">
+            </section>
+
+            <section class="call_to_action">
+                <h2>Get started on your weight loss journey.</h2>
+                <button>Join Ifit Today</button>
+            </section>
+
+            <footer>
                 <nav>
-                    <ul id="top_menu">
-                        <li>Login</li>
-                        <li>Signup</li>
-                        <li>Menu ☰</li>
+                    <ul id="bottom_nav">
+                        <li>Blog-Vidoes</li>
+                        <li>Shop</li>
+                        <li>Company</li>
+                        <li>Press</li>
+                        <li>Jobs</li>
+                        <li>Support</li>
+                        <li>Legal</li>
+                        <li>Contact</li>
                     </ul>
                 </nav>
-            </div>
-            <div class="sub-header">
-                <a>Weight Loss</a>
-                <nav>
-                    <ul id="sub_nav">
-                        <li>Overview</li>
-                        <li>Features</li>
-                        <li>Programs</li>
-                        <li>Training</li>
-                        <li></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
 
-        <section class="hero">
-            <img alt="hero_img" src="/assets/images/hero.png">
-            <h1>Working out has never been so fun</h1>
-            <h3>Welcome to the center of it all. The Fitness Shop presents
-            you with hundreds of workout programs designed to guidey your weight loss journey.</h3>
-        </section>
+                <div class="social_media">
+                    <div><i class="fa fa-facebook"></i></div>
+                    <div><i class="fa fa-twitter"></i></div>
+                    <div><i class="fa fa-google-plus"></i></div>
+                    <div><i class="fa fa-pinterest-p"></i></div>
+                    <div><i class="fa fa-instagram"></i></div>
+                    <div><i class="fa fa-youtube-play"></i></div>
+                </div>
 
-        <section class="gallery">
-            <header>
-                <h2>Weight Loss</h2>
-                <h3>Welcome to the center of it all. The Fitness Shop presents
-                you with hundreds of workout programs designed to guidey your weight loss journey.</h3>
-            </header>
-            <button>View More</button>
-        </section>
+                <span>Copyright &#169; iFit.com. All rights reserved.</span>
 
-        <section class="testimonies">
-            <img alt="testimony_1" src="/assets/images/quote.png">
-        </section>
+                <div class="dropdown">
+                    Language: English
+                </div>
+            </footer> -->
+        </div>
 
-        <section class="call_to_action">
-            <h2>Get started on your weight loss journey.</h2>
-            <button>Join Ifit Today</button>
-        </section>
+        <script>
+            const gallery = document.querySelector(".gallery-images");
+            const images = ["Central_Park", "Coastal", "Elliptical_Weight_Loss", "Elliptical", "Get_Fit", "Grand_Canyon", "Incline_Train", "Lose_Weight", "Off_Season_Weight_Loss", "Paris", "Power_Walk"];
 
-        <footer>
-            <nav>
-                <ul id="bottom_nav">
-                    <li>Blog-Vidoes</li>
-                    <li>Shop</li>
-                    <li>Company</li>
-                    <li>Press</li>
-                    <li>Jobs</li>
-                    <li>Support</li>
-                    <li>Legal</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
+            function generateHTML( image ) {
+                return `
+                    <div class="workout_programs">
+                      <img src="assets/images/${image}.png">
+                      <div class="image__overlay">
+                        <button>View →</button>
+                      </div>
+                    </div>
+                `;
+            }
 
-            <div class="social_media">
-                <div><i class="fa fa-facebook"></i></div>
-                <div><i class="fa fa-twitter"></i></div>
-                <div><i class="fa fa-google-plus"></i></div>
-                <div><i class="fa fa-pinterest-p"></i></div>
-                <div><i class="fa fa-instagram"></i></div>
-                <div><i class="fa fa-youtube-play"></i></div>
-            </div>
-
-            <span>Copyright &#169; iFit.com. All rights reserved.</span>
-
-            <div class="dropdown">
-                Language: English
-            </div>
-        </footer>
+            const html = images.map(generateHTML).join("");
+            gallery.innerHTML = html;
+        </script>
 
     </body>
-    <script>
-        function generateHTML() {
-            return `
-                <div class="item h${h} v${v}">
-                  <img src="images/${randomNumber(12)}.jpg">
-                  <div class="item__overlay">
-                    <button>View →</button>
-                  </div>
-                </div>
-            `;
-        }
-    </script>
 </html>
