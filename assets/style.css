@@ -209,6 +209,19 @@ button:hover {
     display: grid;
     grid-template-columns: 1;
     grid-template-rows: 1;
+    text-align: left;
+}
+
+figcaption div:first-child {
+    font-weight: bold;
+    color: var(--black);
+    font-size: 10px;
+}
+
+figcaption div:last-child {
+    font-weight: bold;
+    color: var(--grey);
+    font-size: 10px;
 }
 
 .program:hover {
