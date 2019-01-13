@@ -3,10 +3,102 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="../assets/style.css">
         <title>Weight Loss</title>
     </head>
     <body>
-        Hello World!=
+        <header>
+            <div class="top_header">
+                <img alt="logo" src="./assets/images/icon.png">
+                <nav>
+                    <ul id="top_menu">
+                        <li>Login</li>
+                        <li>Signup</li>
+                        <li>Menu ☰</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="sub-header">
+                <a>Weight Loss</a>
+                <nav>
+                    <ul id="sub_nav">
+                        <li>Overview</li>
+                        <li>Features</li>
+                        <li>Programs</li>
+                        <li>Training</li>
+                        <li></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero">
+            <img alt="hero_img" src="hero.png">
+            <h1>Working out has never been so fun</h1>
+            <h3>Welcome to the center of it all. The Fitness Shop presents
+            you with hundreds of workout programs designed to guidey your weight loss journey.</h3>
+        </section>
+
+        <section class="gallery">
+            <header>
+                <h2>Weight Loss</h2>
+                <h3>Welcome to the center of it all. The Fitness Shop presents
+                you with hundreds of workout programs designed to guidey your weight loss journey.</h3>
+            </header>
+            <button>View More</button>
+        </section>
+
+        <section class="testimonies">
+            <img>
+        </section>
+
+        <section class="call_to_action">
+            <h2>Get started on your weight loss journey.</h2>
+            <button>Join Ifit Today</button>
+        </section>
+
+        <footer>
+            <nav>
+                <ul id="bottom_nav">
+                    <li>Blog-Vidoes</li>
+                    <li>Shop</li>
+                    <li>Company</li>
+                    <li>Press</li>
+                    <li>Jobs</li>
+                    <li>Support</li>
+                    <li>Legal</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+
+            <div class="social_media">
+                <div>F</div>
+                <div>T</div>
+                <div>G</div>
+                <div>P</div>
+                <div>I</div>
+                <div>y</div>
+            </div>
+
+            <span>Copyright iFit.com. All rights reserved.</span>
+
+            <div class="dropdown">
+                Language: English
+            </div>
+        </footer>
+
     </body>
+    <script>
+        function generateHTML() {
+            return `
+                <div class="item h${h} v${v}">
+                  <img src="images/${randomNumber(12)}.jpg">
+                  <div class="item__overlay">
+                    <button>View →</button>
+                  </div>
+                </div>
+            `;
+        }
+    </script>
 </html>
