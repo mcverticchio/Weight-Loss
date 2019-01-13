@@ -54,16 +54,16 @@ const gallery = document.querySelector(".gallery-images");
 
 function generateHTML( { image, title, subtitle } ) {
     return `
-        <figure class="program">
+        <div class="program">
             <img src="assets/images/${image}.png" alt={title}>
-            <figcaption>
+            <label>
                 <div>${title}</div>
                 <div>${subtitle}</div>
-            </figcaption>
+            </label>
             <div class="program-overlay">
               <button class="button-view">View →</button>
             </div>
-        </figure>
+        </div>
     `;
 }
 
