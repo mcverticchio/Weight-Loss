@@ -72,6 +72,17 @@ button {
   border: 0;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
+.button-view {
+    border: 2px solid var(--white);
+    background: transparent;
+    font-size: 12px;
+    width: 100px;
+    padding: 5px;
+}
 
 /* Top Nav styles */
 
@@ -136,8 +147,6 @@ button {
 .gallery {
     display: grid;
     grid-template-columns: 120px 1fr 120px;
-    align-content: center;
-    align-items: ;
     grid-gap: 20px 0;
     text-align: center;
 }
@@ -169,6 +178,10 @@ button {
     grid-template-rows: 1;
 }
 
+.program:hover {
+    cursor: pointer;
+}
+
 .program img {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
@@ -177,8 +190,34 @@ button {
     object-fit: cover;
 }
 
-/* .program-overlay {
-    background: red;
+.program-overlay {
+    background: rgba(0, 0, 0, 0.5);
     grid-column: 1 / -1;
     grid-row: 1 / -1;
-} */
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: 0.2s;
+}
+
+.program:hover .program-overlay{
+    transform: translateY(0);
+}
+
+.gallery > button {
+    justify-self: center;
+}
+
+/* Call to action */
+
+.call_to_action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+}
+.call_to_action > *{
+    margin: 0 10px;
+}
