@@ -1,14 +1,34 @@
+/* Colors */
+
 :root {
     --black: rgb(66, 66, 66);
     --white: rgb(253, 253, 253);
+    --offWhite: rgb(116, 116, 117);
     --grey: rgb(146, 146, 146);
     --topNav: rgba(20, 20, 20, 0.9);
     --subNav: rgba(253, 253, 253, 0.8);
+    --borderGrey: rgb(206, 206, 206);
 }
+
+/* Fonts */
 
 @font-face {
     font-family: 'muli';
-    src: url('/assets/Muli1/Muli-Regular.ttf');
+    src: url('/assets/fonts/Muli-Regular.ttf') format('truetype');
+    font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'muli';
+	src: url('/assets/fonts/Muli-Bold.ttf') format('truetype');
+    font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'muli';
+	src: url('/assets/fonts/Muli-ExtraLight.ttf') format('truetype');
+	font-weight: lighter;
+	font-style: normal;
 }
 
 html {
@@ -108,22 +128,34 @@ button:hover {
     grid-gap: 20px;
     grid-template-columns: 100px 1fr;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 .sub-nav {
     background: var(--subNav);
     color: var(--grey);
+    border-bottom: 1px solid var(--borderGrey);
+}
+
+.sub-nav > a {
+    color: var(--black);
+    font-weight: bold;
 }
 
 .sub-nav > nav > ul {
     font-size: 12px;
-    font-weight: normal;
+    /* font-weight: normal; */
+}
+
+.sub-nav nav ul li:hover {
+    cursor: pointer;
+    color: var(--black);
+    text-decoration: underline;
+    text-decoration-color: lightgrey;
 }
 
 .hero {
     display: grid;
-    /* max-width: 1200px; */
     grid-template-columns: 120px 12fr 8fr;
     align-content: center;
     color: var(--white);
@@ -163,6 +195,7 @@ button:hover {
 .gallery > h3 {
     font-size: 17.5px;
     font-weight: normal;
+    padding: 0 70px;
 }
 
 .gallery-images {
@@ -212,12 +245,49 @@ button:hover {
 
 /* Call to action */
 
-.call_to_action {
+.call-to-action {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.call-to-action h2 {
     font-weight: lighter;
 }
-.call_to_action > *{
+.call-to-action > * {
     margin: 0 10px;
+}
+
+/* Footer */
+
+footer {
+    background: var(--topNav);
+    color: var(--offWhite);
+    height: 50px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    align-items: center;
+    font-size: 10px;
+    grid-gap: 20px;
+}
+
+.bottom-nav > ul > li {
+    font-size: 10px;
+}
+
+.bottom-nav > ul > li::after {
+    content: ' /';
+}
+
+.bottom-nav > ul > li:last-child::after {
+    content: '';
+}
+
+footer span {
+    justify-self: right;
+}
+
+.dropdown {
+    text-transform: uppercase;
+    font-weight: bold;
 }

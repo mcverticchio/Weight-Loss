@@ -48,18 +48,18 @@
                 <button>View More</button>
             </section>
 
-            <!-- <section class="testimonies">
+            <section class="testimonies">
                 <img alt="testimony_1" src="/assets/images/quote.png">
-            </section> -->
+            </section>
 
-            <section class="call_to_action">
+            <section class="call-to-action">
                 <h2>Get started on your weight loss journey.</h2>
                 <button>Join Ifit Today</button>
             </section>
 
-            <!-- <footer>
-                <nav>
-                    <ul id="bottom_nav">
+            <footer>
+                <nav class="bottom-nav">
+                    <ul>
                         <li>Blog-Vidoes</li>
                         <li>Shop</li>
                         <li>Company</li>
@@ -72,12 +72,14 @@
                 </nav>
 
                 <div class="social_media">
-                    <div><i class="fa fa-facebook"></i></div>
-                    <div><i class="fa fa-twitter"></i></div>
-                    <div><i class="fa fa-google-plus"></i></div>
-                    <div><i class="fa fa-pinterest-p"></i></div>
-                    <div><i class="fa fa-instagram"></i></div>
-                    <div><i class="fa fa-youtube-play"></i></div>
+                    <ul>
+                        <li><i class="fa fa-facebook"></i></li>
+                        <li><i class="fa fa-twitter"></i></li>
+                        <li><i class="fa fa-google-plus"></i></li>
+                        <li><i class="fa fa-pinterest-p"></i></li>
+                        <li><i class="fa fa-instagram"></i></li>
+                        <li><i class="fa fa-youtube-play"></i></li>
+                    </ul>
                 </div>
 
                 <span>Copyright &#169; iFit.com. All rights reserved.</span>
@@ -85,27 +87,8 @@
                 <div class="dropdown">
                     Language: English
                 </div>
-            </footer> -->
+            </footer>
         </div>
-
-        <script>
-            const gallery = document.querySelector(".gallery-images");
-            const images = ["Get_Fit", "Grand_Canyon", "Power_Walk", "Elliptical_Weight_Loss", "Off_Season_Weight_Loss", "Central_Park",  "5K", "Coastal", "Elliptical", "Incline_Train", "Paris", "Lose_Weight"];
-
-            function generateHTML( image ) {
-                return `
-                    <div class="program">
-                      <img src="assets/images/${image}.png">
-                      <div class="program-overlay">
-                        <button class="button-view">View →</button>
-                      </div>
-                    </div>
-                `;
-            }
-
-            const html = images.map(generateHTML).join("");
-            gallery.innerHTML = html;
-        </script>
-
+        <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
