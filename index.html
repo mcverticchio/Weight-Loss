@@ -29,7 +29,7 @@
                             <li>Features</li>
                             <li>Programs</li>
                             <li>Training</li>
-                            <li></li>
+                            <li><i class="fa fa-search"></i></li>
                         </ul>
                     </nav>
                 </div>
@@ -40,26 +40,24 @@
                 </header>
             </div>
 
-            <!-- <section class="gallery">
-                <header>
-                    <h2>Weight Loss</h2>
-                    <h3>Welcome to the center of it all. The Fitness Shop presents
-                    you with hundreds of workout programs designed to guidey your weight loss journey.</h3>
-                </header>
+            <section class="gallery">
+                <h2>Weight Loss</h2>
+                <h3>Welcome to the center of it all. The Fitness Shop presents
+                you with hundreds of workout programs designed to guide your weight loss journey.</h3>
                 <div class="gallery-images"></div>
                 <button>View More</button>
             </section>
 
-            <section class="testimonies">
+            <!-- <section class="testimonies">
                 <img alt="testimony_1" src="/assets/images/quote.png">
-            </section>
+            </section> -->
 
-            <section class="call_to_action">
+            <!-- <section class="call_to_action">
                 <h2>Get started on your weight loss journey.</h2>
                 <button>Join Ifit Today</button>
-            </section>
+            </section> -->
 
-            <footer>
+            <!-- <footer>
                 <nav>
                     <ul id="bottom_nav">
                         <li>Blog-Vidoes</li>
@@ -92,13 +90,13 @@
 
         <script>
             const gallery = document.querySelector(".gallery-images");
-            const images = ["Central_Park", "Coastal", "Elliptical_Weight_Loss", "Elliptical", "Get_Fit", "Grand_Canyon", "Incline_Train", "Lose_Weight", "Off_Season_Weight_Loss", "Paris", "Power_Walk"];
+            const images = ["Get_Fit", "Grand_Canyon", "Power_Walk", "Elliptical_Weight_Loss", "Off_Season_Weight_Loss", "Central_Park",  "5K", "Coastal", "Elliptical", "Incline_Train", "Paris", "Lose_Weight"];
 
             function generateHTML( image ) {
                 return `
-                    <div class="workout_programs">
+                    <div class="program">
                       <img src="assets/images/${image}.png">
-                      <div class="image__overlay">
+                      <div class="program-overlay">
                         <button>View →</button>
                       </div>
                     </div>
