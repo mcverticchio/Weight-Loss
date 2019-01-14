@@ -618,7 +618,9 @@ footer span {
         font-size: 10px;
     }
     .top {
-        background: url('images/hero.png') bottom no-repeat;
+        background: url('images/hero.png') contain bottom no-repeat;
+        min-height: 440px;
+        transition: 1s;
     }
     .top_nav {
         grid-template-columns: 50px auto;
