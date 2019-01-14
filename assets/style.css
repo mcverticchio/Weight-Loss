@@ -184,7 +184,7 @@ button:hover {
 
 
 .top {
-    background: url('images/hero.png') bottom no-repeat;
+    background: url('images/hero.png') 0 45% no-repeat;
     overflow: hidden;
     background-size: cover;
     height: 100vh;
@@ -427,6 +427,13 @@ label div:last-child {
 .carousel {
     overflow: hidden;
 }
+
+.carousel-img {
+    display: flex;
+    justify-self: center;
+    width: 100vw;
+}
+
 .prev, .next {
     position: relative;
     background: transparent;
@@ -540,7 +547,6 @@ footer span {
 
 /* media queries */
 
-
 @media(max-width: 900px) {
     .gallery {
         grid-template-columns: 1fr;
@@ -610,6 +616,9 @@ footer span {
     }
     ul > li {
         font-size: 10px;
+    }
+    .top {
+        background: url('images/hero.png') bottom no-repeat;
     }
     .top_nav {
         grid-template-columns: 50px auto;
