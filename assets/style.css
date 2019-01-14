@@ -591,6 +591,16 @@ footer span {
         margin-bottom: 20px;
         text-align: center;
     }
+    button {
+        width: 150px;
+        font-size: 12px;
+    }
+    .side-menu ul li {
+        font-size: 12px;
+    }
+    .side-menu .close-menu .fa {
+        font-size: 15px;
+    }
 }
 
 @media(max-width: 500px) {
