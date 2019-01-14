@@ -421,6 +421,30 @@ label div:last-child {
 }
 
 
+/* Carousel */
+
+
+.carousel {
+    overflow: hidden;
+}
+.prev, .next {
+    position: relative;
+    background: transparent;
+    border: 1px solid var(--blue);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0 5px;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -35px;
+}
+
+
 /* Call to action */
 
 
@@ -588,5 +612,8 @@ footer span {
     }
     .gallery > h3 {
         font-size: 15px;
+    }
+    .carousel {
+        display: none;
     }
 }
