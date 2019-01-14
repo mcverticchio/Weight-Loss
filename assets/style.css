@@ -61,6 +61,8 @@ table {
     --subNav: rgba(253, 253, 253, 0.8);
     --borderGrey: rgb(206, 206, 206);
     --blue: rgb(0, 151, 217);
+    --sideMenu: rgb(30, 30, 30);
+    --subMenu: rgb(20, 20, 20);
 }
 
 
@@ -216,6 +218,7 @@ button:hover {
 .sub-nav > nav > ul {
     font-size: 12px;
     font-weight: bold;
+    transition: 0.1s;
 }
 
 .sub-nav nav ul li:hover {
@@ -223,7 +226,13 @@ button:hover {
     color: black;
     text-decoration: underline;
     text-decoration-color: var(--grey);
-    transition: all 0.2s;
+    transition: 0.1s;
+}
+
+.menu-open:hover {
+    cursor: pointer;
+    color: var(--blue);
+    transition: 0.2s;
 }
 
 .hero {
@@ -269,9 +278,26 @@ button:hover {
 
 
 .side-menu {
+    height: 100%;
+    width: 0;
     position: absolute;
-    border: 1px solid black;
+    z-index: 1;
+    top: 0;
+    right: 0;
     display: grid;
+    grid-template-columns: 1fr 25px;
+    grid-template-rows: auto 45px;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background: var(--sideMenu);
+}
+
+.side-menu > * {
+    transition: 0.3s;
+}
+
+.side-menu-items {
+    padding: 20px;
 }
 
 .side-menu ul {
@@ -279,6 +305,31 @@ button:hover {
     align-items: flex-start;
 }
 
+.side-menu ul li {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 0;
+    color: var(--offWhite);
+    transition: 0.1s;
+}
+
+.side-menu .close-menu {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.side-menu .close-menu .fa {
+    font-size: 25px;
+    transition: 0.1s;
+}
+
+.side-menu ul li:hover,
+.side-menu .close-menu .fa:hover {
+    cursor: pointer;
+    color: var(--white);
+}
 
 /* Gallery Styles */
 

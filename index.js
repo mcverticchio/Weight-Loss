@@ -51,6 +51,9 @@ const images = [
 ]
 
 const gallery = document.querySelector(".gallery-images");
+const menuOpen = document.querySelector(".menu-open");
+const menuClose = document.querySelector(".menu-close");
+const sideMenu = document.querySelector(".side-menu");
 
 function generateHTML( { image, title, subtitle } ) {
     return `
@@ -69,3 +72,11 @@ function generateHTML( { image, title, subtitle } ) {
 
 const html = images.map(generateHTML).join("");
 gallery.innerHTML = html;
+
+menuOpen.addEventListener('click', function() {
+    sideMenu.style.width = '250px';
+})
+
+menuClose.addEventListener('click', function() {
+    sideMenu.style.width = '0px';
+})
