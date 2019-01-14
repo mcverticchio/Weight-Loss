@@ -1,4 +1,56 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 /* Colors */
+
 
 :root {
     --black: rgb(66, 66, 66);
@@ -11,7 +63,9 @@
     --blue: rgb(0, 151, 217);
 }
 
+
 /* Fonts */
+
 
 @font-face {
     font-family: 'muli';
@@ -39,6 +93,9 @@
 }
 
 
+/* My general Styles */
+
+
 html {
     box-sizing: border-box;
     font-family: "muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
@@ -58,6 +115,7 @@ body {
 img {
     max-width: 100%;
 }
+
 h1,
 h2,
 h3,
@@ -72,7 +130,9 @@ h6 {
     grid-gap: 30px;
 }
 
+
 /* List styles */
+
 
 ul {
     display: flex;
@@ -89,7 +149,9 @@ li {
     padding: 0 10px;
 }
 
-/*  Button style */
+
+/*  Button(s) */
+
 
 button {
   background-color: var(--blue);
@@ -115,7 +177,9 @@ button:hover {
     padding: 5px;
 }
 
-/* Top Nav styles */
+
+/* Top Nav/Header */
+
 
 .top {
     background: url('/assets/images/hero.png') bottom no-repeat;
@@ -200,7 +264,24 @@ button:hover {
     top: 60px;
 }
 
+
+/* Side Menu */
+
+
+.side-menu {
+    position: absolute;
+    border: 1px solid black;
+    display: grid;
+}
+
+.side-menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
 /* Gallery Styles */
+
 
 .gallery {
     display: grid;
@@ -222,13 +303,14 @@ button:hover {
     font-weight: normal;
     max-width: 700px;
     justify-self: center;
+    margin: 20px 0;
 }
 
 .gallery-images {
     margin: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 25px;
 }
 
 .program {
@@ -237,6 +319,10 @@ button:hover {
     grid-template-columns: 1;
     grid-template-rows: 1;
     text-align: left;
+}
+
+label {
+    padding-bottom: 5px;
 }
 
 label div:first-child {
@@ -283,7 +369,9 @@ label div:last-child {
     justify-self: center;
 }
 
+
 /* Call to action */
+
 
 .call-to-action {
     display: flex;
@@ -291,13 +379,16 @@ label div:last-child {
     align-items: center;
 }
 .call-to-action h2 {
+    font-size: 34px;
     font-weight: lighter;
 }
 .call-to-action > * {
     margin: 0 10px;
 }
 
+
 /* Footer */
+
 
 footer {
     background: var(--topNav);
@@ -312,9 +403,9 @@ footer {
     grid-gap: 10px;
 }
 
-
 .bottom-nav > ul > li {
     font-size: 10px;
+    padding: 0 5px;
 }
 
 .bottom-nav > ul > li::after {
@@ -334,7 +425,9 @@ footer span {
     font-weight: bold;
 }
 
+
 /* key frames */
+
 
 @keyframes fadein {
     from {
@@ -369,6 +462,10 @@ footer span {
     }
 }
 
+
+/* media queries */
+
+
 @media(max-width: 900px) {
     .gallery {
         grid-template-columns: 1fr;
@@ -381,6 +478,7 @@ footer span {
     footer {
         grid-template-columns: 1fr;
         justify-items: right;
+        padding: 20px;
     }
     .bottom-nav > ul > li::after {
         content: '';
