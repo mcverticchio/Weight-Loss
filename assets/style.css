@@ -267,7 +267,7 @@ button:hover {
 }
 
 .shadow-div {
-    box-shadow: 1px 50px 150px 80px rgba(0,0,0,0.6);
+    box-shadow: 1px 50px 150px 80px rgba(0,0,0,0.4);
     height: 0px;
     position: relative;
     top: 60px;
