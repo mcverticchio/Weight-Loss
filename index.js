@@ -55,7 +55,7 @@ const gallery = document.querySelector(".gallery-images");
 function generateHTML( { image, title, subtitle } ) {
     return `
         <div class="program">
-            <img src="assets/images/${image}.png" alt={title}>
+            <img src="assets/images/${image}.png" alt=${title}>
             <label>
                 <div>${title}</div>
                 <div>${subtitle}</div>
